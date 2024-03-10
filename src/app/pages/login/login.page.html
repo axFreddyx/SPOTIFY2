@@ -1,0 +1,20 @@
+<ion-header>
+  <div class="cont-header">
+    <img class="logo" alt="logo" src="/assets/logo.png" />
+  </div>
+</ion-header>
+
+<ion-content>
+  <fieldset class="form">
+    <legend>Iniciar Sesión</legend>
+    <ion-input type="text" placeholder="Usuario..." name="username" [(ngModel)] = "username"></ion-input>
+    <ion-input type="password" placeholder="Contraseña..." name="password" [(ngModel)] = "password"></ion-input>
+    <ion-button color="danger" (click)="login()">Login</ion-button>
+    <div class="content">
+      <p>¿No tienes una cuenta?</p>
+      <ion-button (click)="register()" color="danger" expand="block" fill="clear" >
+        Crea una.
+      </ion-button>
+    </div>
+  </fieldset>
+</ion-content>

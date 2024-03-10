@@ -1,0 +1,33 @@
+<app-header>
+  <ion-content>
+    <div class="nav">
+      <a class="btn" href="/create">Crear canciones</a>
+    </div> 
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size="12" size-lg="4" size-md="4" size-sm="6" size-xs="12" *ngFor="let s of song">
+          <ion-card>
+            <img alt="{{s.name}}" src="http://localhost:3000/albums/image/{{s.image}}" />
+            <ion-card-header>
+              <ion-card-title>{{s.name}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="cont-gest">
+              <div class="btn-gest">
+                <ion-button color="success" fill="clear">Reproducir</ion-button>
+              </div>
+              <div class="flex">
+                <div class="btn-gest">
+                  <ion-button color="warning" (click)="update(s.id)" fill="clear">Actualizar</ion-button>
+                </div>
+                <div class="btn-gest">
+                  <ion-button color="danger" (click)="delete(s.id)" fill="clear">Eliminar</ion-button>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+</app-header>

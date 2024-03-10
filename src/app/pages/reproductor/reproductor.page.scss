@@ -1,0 +1,48 @@
+.cont-audio{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    height: 100%; 
+    .reproductor{
+        display: flex;
+        width: 100%;
+        border-radius: 0%;
+        .oneSect{
+            display: flex;
+            width: 33.33%;
+            margin-top: 1rem;
+            
+            .imgSong{
+                width: 20%;
+            }
+            .nameSong{
+                margin: auto 2rem;
+            }
+        }
+        .twoSect{
+            display: block;
+            width: 33.33%;
+            margin-bottom: 1rem;
+            .btns{
+                display: flex;
+                justify-content: center;
+            }
+            .player{
+                display: flex;
+                width: 100%;
+                align-items: center; /* Alinea verticalmente los elementos */
+                .time{
+                    margin-right: 1rem; /* Ajusta el margen si es necesario */
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.bg-song{
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}

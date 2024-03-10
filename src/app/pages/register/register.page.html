@@ -1,0 +1,16 @@
+<ion-header>
+  <div class="cont-header">
+    <img class="logo" alt="logo" src="/assets/logo.png" />
+  </div>
+</ion-header>
+
+<ion-content>
+  <fieldset class="form">
+    <legend>Registrate</legend>
+    <ion-input type="text" placeholder="Usuario..." name="username" [(ngModel)]="data.username"></ion-input>
+    <ion-input type="password" placeholder="Contraseña..." name="password" [(ngModel)]="data.password"></ion-input>
+    <ion-input type="email" placeholder="Email..." [(ngModel)]="data.email"></ion-input>
+    <ion-input type="text" placeholder="Nombre Completo..." [(ngModel)]="data.name"></ion-input>
+    <ion-button color="danger" (click)="register()">Registrarse</ion-button>
+  </fieldset>
+</ion-content>

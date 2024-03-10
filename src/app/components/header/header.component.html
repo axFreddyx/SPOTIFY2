@@ -1,0 +1,59 @@
+<ion-menu class="menu" side="end" contentId="main-content">
+  <div *ngFor="let u of user">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Rhymus</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding padding-menu" *ngIf="u.role === 'admin'">
+      <ion-title>Opciones</ion-title>
+      <div class="category">
+        <div class="btn" (click)="page('songs')">
+          Musica
+        </div>
+        <div class="btn" (click)="page('users')">
+          Usuarios
+        </div>
+        <div class="btn" (click)="page('albums')">
+          Albums
+        </div>
+        <div class="btn" (click)="page('artists')">
+          Artistas
+        </div>
+      </div>
+    </ion-content>
+    <ion-content class="ion-padding padding-menu">
+      <div class="library">
+        <ion-title>Biblioteca</ion-title>
+      </div>
+    </ion-content>
+    <ion-content>
+      <div class="btn" (click)="perfil(u.id)">
+        <div class="user-image">
+          <img src="http://localhost:3000/users/image/{{u.image}}" alt="img de {{u.username}}"> 
+        </div>
+        <ion-title>{{u.username}}</ion-title>
+      </div>
+      <ion-button id="btnLogOut" (click)="logout()" expand="block" fill="clear" shape="round">
+        Cerrar Sesión
+      </ion-button>
+    </ion-content>
+  </div>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <div class="cont-header">
+        <div class="cont-logo">
+          <img class="logo" alt="logo" src="/assets/logo.png" />
+        </div>
+      </div>   
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+    <ng-content></ng-content>
+  </ion-content>
+</div>

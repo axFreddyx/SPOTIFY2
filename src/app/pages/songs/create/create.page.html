@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Canción</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <fieldset class="form">
+    <legend>Crear Canción</legend>
+    <ion-input type="text" [(ngModel)]="data.name" placeholder="Nombre..." ></ion-input>
+    <ion-input type="number" [(ngModel)]="data.number" placeholder= "Numero..."></ion-input>
+    <ion-input type="text" [(ngModel)]="data.duration" placeholder="Duración..."></ion-input>
+    <ion-item>
+      <ion-select [(ngModel)]="data.album_id" label="Album" label-placement="floating">
+        <ion-select-option disabled value="apple">-- Selecciona un album --</ion-select-option>
+        <ion-select-option *ngFor="let a of albums" [value]="a.id">
+          {{ a.title }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="content">
+      <!-- <ion-button color="danger">Agregar canción</ion-button> -->
+      <ion-button color="danger" (click)="crearCancion()">Crear</ion-button>
+    </div>
+  </fieldset>
+</ion-content>

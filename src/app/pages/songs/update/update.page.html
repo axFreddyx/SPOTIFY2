@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <fieldset class="form">
+    <legend>Actualizar Canción</legend>
+    <ion-input type="text" [(ngModel)]="datas.name" placeholder="Nombre..." ></ion-input>
+    <ion-input type="number" [(ngModel)]="datas.number" placeholder= "Numero..."></ion-input>
+    <ion-input type="text" [(ngModel)]="datas.duration" placeholder="Duración..."></ion-input>
+    <div class="content">
+      <label for="file" class="btn btn-acutalizar">Subir Archivo</label>
+      <h3 id="nombre" class="nomImagen"></h3>
+      <input (change)="uploadFile($event)" class="oculto" id="file" type="file"/>
+    </div>
+    <div class="content">
+      <ion-button color="danger">Actualizar</ion-button>
+    </div>
+  </fieldset>
+</ion-content>

@@ -1,0 +1,28 @@
+$principal:#ec171770;
+
+.cont{
+    margin: 0 auto;
+    overflow-y: scroll;
+    width: 80%;
+    ion-card{
+        cursor: pointer;
+        display: flex;
+        height: 5rem;
+        max-width: 100%;
+        transition: 0.5s;
+        img{
+            width: 5rem;
+        }
+        .cont-card{
+            display: flex;
+            margin: auto 1rem;
+            ion-card-subtitle{
+                margin: auto 2rem;
+            }
+        }
+        &:hover{
+            background-color: $principal;
+        }
+    }
+}
+

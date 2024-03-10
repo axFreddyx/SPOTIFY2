@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Album</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <fieldset class="form">
+    <legend>Crear Album</legend>
+    <ion-input type="text" [(ngModel)]="data.title" placeholder="Titulo..." ></ion-input>
+    <ion-input type="text" [(ngModel)]="data.description" placeholder= "Descripción..."></ion-input>
+    <ion-input type="text" [(ngModel)]="data.year" placeholder="Año..."></ion-input>
+    <ion-item>
+      <ion-select [(ngModel)]="data.artist_id" label="Artista" label-placement="floating">
+        <ion-select-option disabled selected value="apple">-- Selecciona un artista --</ion-select-option>
+        <ion-select-option *ngFor="let a of artists" value="{{a.id}}">{{a.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="content">
+      <ion-button (click)="createAlbum()" color="danger">Crear</ion-button>
+    </div>
+  </fieldset>
+</ion-content>

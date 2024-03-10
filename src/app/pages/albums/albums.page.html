@@ -1,0 +1,34 @@
+<app-header>
+  <ion-content>
+    <div class="nav">
+      <a class="btn" href="albums/create">Nuevo Lanzamiento</a>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size="12" size-lg="4" size-md="4" size-sm="6" size-xs="12" *ngFor="let a of albums">
+          <ion-card>
+            <img alt="{{a.title}}" src="http://localhost:3000/albums/image/{{a.image}}" />
+            <ion-card-header>
+              <ion-card-title>{{a.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="cont-gest">
+              <ion-card-subtitle>{{a.description}}</ion-card-subtitle>
+              <div class="btn-gest">
+                <ion-button color="success" (click)="album(a.id)" fill="clear">Ver Album</ion-button>
+              </div>
+              <div class="flex">
+                <div class="btn-gest">
+                  <ion-button color="warning" (click)="update(a.id)" fill="clear">Actualizar</ion-button>
+                </div>
+                <div class="btn-gest">
+                  <ion-button color="danger" fill="clear">Eliminar</ion-button>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+</app-header>
